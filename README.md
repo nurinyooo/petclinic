@@ -1,2 +1,2 @@
-# petclinic
+# com.nurinyooo.petclinic
 petclinicnewProject
