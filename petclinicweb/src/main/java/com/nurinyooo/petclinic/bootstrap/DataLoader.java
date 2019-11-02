@@ -23,6 +23,7 @@ public class DataLoader implements CommandLineRunner {
         this.petTypeService = petTypeService;
         this.specialitesService = specialitesService;
         this.visitService = visitService;
+
     }
 
     @Override
@@ -31,14 +32,13 @@ public class DataLoader implements CommandLineRunner {
         int count = petTypeService.findAll().size();
 
         if(count == 0){
-
+            loadData();
         }
-        loadData();
-
 
     }
 
     private void loadData() {
+
         PetType dog = new PetType();
         dog.setName("Dog");
         PetType savedDogPetType = petTypeService.save(dog);
@@ -113,5 +113,7 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2);
 
         System.out.println("Loading Vets...");
+
     }
+
 }

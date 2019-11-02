@@ -9,6 +9,7 @@ public class Visit extends BaseEntity {
 
     @Column(name = "date")
     private LocalDate date;
+
     @Column(name = "description")
     private String description;
 
@@ -39,4 +40,5 @@ public class Visit extends BaseEntity {
     public void setPet(Pet pet) {
         this.pet = pet;
     }
+
 }

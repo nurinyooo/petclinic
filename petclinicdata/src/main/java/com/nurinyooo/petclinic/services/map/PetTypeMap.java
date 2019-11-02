@@ -9,7 +9,6 @@ import java.util.Set;
 
 @Service
 @Profile({"default","map"})
-
 public class PetTypeMap extends AbstractMapService<PetType,Long> implements PetTypeService {
 
 
@@ -37,4 +36,5 @@ public class PetTypeMap extends AbstractMapService<PetType,Long> implements PetT
     public PetType findById(Long id) {
         return super.findById(id);
     }
+
 }
